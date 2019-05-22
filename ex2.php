@@ -10,10 +10,10 @@
 	for ($i = 0 ; $i <= strlen($cipher_text) ; $i++){
 		for ($j = 0 ; $j < sizeof($arr) ; $j++){
 			if ($cipher_text[$i] == $arr[$j]){
-				if ($j >= 3 && $j <= 25){
+				if ($j >= $shift && $j <= 25){
 					echo $arr[$j-$shift];
 				}else{
-					echo $arr[$j+23]; //if $cipher_text[23] == $arr[0] => $arr[0 + 23] = 'X';
+					echo $arr[$j+(26 - $shift)]; //if $shift = 3 => $cipher_text[23] == $arr[0] => $arr[0 + 23] = 'X';
 				}
 				$count = 1;
 			}	

@@ -10,7 +10,7 @@
 	for ($i = 0 ; $i <= strlen($plain) ; $i++){
 		for ($j = 0 ; $j < sizeof($arr) ; $j++){
 			if ($plain[$i] == $arr[$j]){
-				if ($j >= 0 && $j <= 22){
+				if ($j >= 0 && $j <= (25 - $shift)){
 					echo $arr[$j+$shift];
 				}else{
 					echo $arr[($j+$shift)%26];
